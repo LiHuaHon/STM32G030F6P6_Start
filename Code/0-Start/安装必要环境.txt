@@ -1,0 +1,10 @@
+快速原理上手视频
+
+Cortex-M3 正点原子 HAL库 https://www.bilibili.com/video/BV1bv4y1R7dp?p=45&vd_source=7f73b8021ae08d1411144457c7c55521
+第45讲-第49讲
+
+Cortex-M3 正点原子 标准库 https://www.bilibili.com/video/BV1Lx411Z7Qa?p=14&vd_source=7f73b8021ae08d1411144457c7c55521
+第12讲
+
+Cortex-M3 江科大自化协 标准库函数 https://www.bilibili.com/video/BV1th411z7sn?p=5&vd_source=7f73b8021ae08d1411144457c7c55521
+[3-1]GPIO输出
