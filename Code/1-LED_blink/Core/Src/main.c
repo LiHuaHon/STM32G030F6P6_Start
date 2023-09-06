@@ -92,9 +92,11 @@ int main(void)
   /* USER CODE BEGIN 2 */
 	
 	/**
-  * @GPIOInit MX_GPIO_Init(); 这个函数该干嘛干嘛
-  * @GPIOInit MX_GPIO_Init(); 这个函数该干嘛干嘛
+	* @函数解释声明
+  * HAL_Init();//HAL内部时钟初始化函数
+  * MX_GPIO_Init(); //GPIO初始化函数 初始化PA4 用于控制PA4外置LED灯开/关
   */
+	
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -104,6 +106,10 @@ int main(void)
     /* USER CODE END WHILE */
 		
     /* USER CODE BEGIN 3 */
+		HAL_GPIO_WritePin(GPIOA,GPIO_PIN_4,GPIO_PIN_SET);//拉高PA4
+		HAL_Delay(500);//HAL库延迟函数 延迟单位毫秒ms
+		HAL_GPIO_WritePin(GPIOA,GPIO_PIN_4,GPIO_PIN_RESET);//拉低PA4
+		HAL_Delay(500);//HAL库延迟函数 延迟单位毫秒ms
   }
   /* USER CODE END 3 */
 }
