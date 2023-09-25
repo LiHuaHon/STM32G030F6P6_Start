@@ -109,10 +109,21 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   MX_TIM14_Init();
+	
   /* USER CODE BEGIN 2 */
   HAL_GPIO_WritePin(GPIOA,GPIO_PIN_4,GPIO_PIN_RESET);   //PA4对应引脚低
-
-    HAL_TIM_PWM_Start(&htim14,TIM_CHANNEL_1);//开启PWM通道1
+   HAL_TIM_PWM_Start(&htim14,TIM_CHANNEL_1);//开启PWM通道1 
+	//使用定时器14 PB1 输出PWM控制舵机
+	/*
+		接线示意
+		
+		PB1->舵机PWM信号输入口
+		
+		VCC->舵机正极
+		
+		GND->舵机负极
+	
+	*/
   /* USER CODE END 2 */
 
   /* Infinite loop */

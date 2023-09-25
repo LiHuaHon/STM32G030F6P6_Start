@@ -21,5 +21,7 @@
  基与本开发板的扩展模块
  无损可装配宿舍指纹/NFC读卡锁(在做)
 
+ 在Tools->代码映射 文件中有介绍Code内代码的基本功能 
+
  如果你是从https://github.com/LiHuaHon/STM32G030F6P6_Start的网站进来 则点击绿色按钮 Code 选择 Downloads ZIP 下载全部文档的压缩包
  如果你是从https://gitee.com/BF52/STM32G030F6P6_Start的网站进来 则点击橙色按钮 克隆/下载 选择 下载ZIP 下载全部文档的压缩包

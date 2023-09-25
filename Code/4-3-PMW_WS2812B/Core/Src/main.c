@@ -97,6 +97,11 @@ int main(void)
   MX_TIM14_Init();
   /* USER CODE BEGIN 2 */
   HAL_GPIO_WritePin(GPIOA,GPIO_PIN_4,GPIO_PIN_RESET);   //PA4对应引脚低
+	/*
+		
+		按下KEY改变灯光状态
+		
+	*/
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -104,7 +109,6 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
     /* USER CODE BEGIN 3 */
 		switch(led_mode%10){
 			case 1:
