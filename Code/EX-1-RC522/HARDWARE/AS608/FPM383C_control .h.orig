@@ -1,0 +1,21 @@
+#ifndef __FPM383C_CONTORL_H
+#define	__FPM383C_CONTORL_H
+#include "sys.h"
+#include "tim.h"
+
+#define FMP383C_SLEEP  HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_12)//模块睡眠检测位
+#define CLOSE_DOOR()  {	__HAL_TIM_SET_COMPARE(&htim3,TIM_CHANNEL_1,7020);HAL_GPIO_WritePin(GPIOB, GPIO_PIN_9, GPIO_PIN_RESET);}
+#define OPEN_DOOR()  	{	__HAL_TIM_SET_COMPARE(&htim3,TIM_CHANNEL_1,6350);HAL_GPIO_WritePin(GPIOB, GPIO_PIN_9, GPIO_PIN_SET); }
+//extern u8 warning;//系统警告数 
+extern u8 REpassword[6];//系统密码
+
+
+u8 AutoControl_FR(void);
+
+void FPM383C_Work(void);
+
+void	OLED_Show_Message(void);
+u8 Password_Check(u8 *CKP);
+
+
+#endif /* __FPM383C_CONTORL_H */
