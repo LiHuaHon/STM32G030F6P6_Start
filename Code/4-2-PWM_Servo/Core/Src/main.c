@@ -125,7 +125,8 @@ int main(void)
 	
 	*/
   /* USER CODE END 2 */
-
+	TIM14->CCR1=(60.F/100.F)*(TIM14_PERIOD_COUNT*0.975f-TIM14_PERIOD_COUNT*0.875f); //限制在0.5~2.5ms之间
+	while(1);	
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)

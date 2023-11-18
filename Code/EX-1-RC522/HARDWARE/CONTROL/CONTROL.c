@@ -236,7 +236,6 @@ uint8_t Control_ReadUserFormAT24CXX(void){
 //					printf("读取到用户ID=%8X NAME=%s\r\n",u8_Tun_u32(tempID),tempName);
 				}else{
 //					printf("错误数据在%2X~%2X之间\r\n",1+i*13+inC,1+i*13+USER_ID_LENTH+USER_ID_NAME);
-					i--;
 				}
 			}
 	}

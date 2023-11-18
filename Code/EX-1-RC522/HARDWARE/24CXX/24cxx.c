@@ -74,12 +74,12 @@ uint32_t AT24CXX_ReadLenByte(uint16_t ReadAddr,uint8_t Len)
 uint8_t AT24CXX_Check(void)
 {
 	uint8_t temp;
-	temp=AT24CXX_ReadOneByte(255);//避免每次开机都写AT24CXX			   
+	temp=AT24CXX_ReadOneByte(EE_TYPE);//避免每次开机都写AT24CXX			   
 	if(temp==0X55)return 0;		   
 	else//排除第一次初始化的情况
 	{
-		AT24CXX_WriteOneByte(255,0X55);
-	    temp=AT24CXX_ReadOneByte(255);	  
+		AT24CXX_WriteOneByte(EE_TYPE,0X55);
+	    temp=AT24CXX_ReadOneByte(EE_TYPE);	  
 		if(temp==0X55)return 0;
 	}
 	return 1;											  

@@ -33,7 +33,12 @@
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
 
-// 代码版本 V0.1 可上线使用
+//以下为版本更新说明
+//V0.1可上线使用
+//V0.2 
+//修改了存入20号数据会导致错误 无法再次读取消息的bug 
+//修改数据 24cxx.c 的AT24CXX_Check 函数的 255 改成 EE_TYPE 
+//修改数据 CONTROL.c 的 Control_ReadUserFormAT24CXX Line 239（i-- ）删除
 
 #define FSUS_OPEN_ANGLE 5 	//修改开门和关门的角度
 #define FSUS_CLOSE_ANGLE -30
